@@ -13,7 +13,7 @@ jobs:
   integration_test_android:
     executor:
       name: android/android-machine
-      resource-class: xlarge
+      resource-class: large
     steps:
       - checkout
       - run:
@@ -50,7 +50,7 @@ jobs:
   distribute_android:
     executor:
       name: android/android-machine
-      resource-class: xlarge
+      resource-class: large
     steps:
       - checkout
       - flutter-orb/install_sdk_and_pub:
