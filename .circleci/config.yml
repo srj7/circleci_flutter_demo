@@ -75,6 +75,8 @@ jobs:
           command: flutter drive --target=test_driver/app.dart
       - store_artifacts:
           path: ozzie
+    # The resource_class feature allows configuring CPU and RAM resources for each job. Different resource classes are available for different executors. https://circleci.com/docs/2.0/configuration-reference/#resourceclass
+    resource_class: large
 
   distribute_ios:
     executor: mac
